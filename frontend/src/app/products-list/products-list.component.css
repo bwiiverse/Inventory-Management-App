@@ -1,0 +1,76 @@
+/* Center the Table on the Page */
+.table-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    min-height: 90vh;         /* Keeps it vertically centered */
+    width: 100%;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+}
+
+/* Wrapper for Table to Enable Scrolling */
+.table-wrapper {
+    max-height: 500px; /* Adjust height as needed */
+    overflow-y: auto; /* Enables vertical scrollbar */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100%;
+}
+/* Adjust Table Size */
+.table {
+    width: 100%;             
+    border-collapse: collapse;
+    font-size: 16px;        
+    color: black;
+}
+
+/* Table Header */
+.table thead {
+    background-color: black;  /* Black header */
+    color: white;             /* White text */
+    font-weight: bold;
+    position: sticky;
+    top: 0;                  /* Keeps the header fixed when scrolling */
+    z-index: 10;
+}
+
+/* Make header and rows taller */
+.table th, .table td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black; /* Black border */
+}
+
+/* Alternate Row Colors */
+.table tbody tr:nth-child(odd) {
+    background-color: white; /* White row */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #e6e6e6; /* Light gray row for subtle contrast */
+}
+
+/* Make Header Text Bold */
+.table th {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+    background-color: #cccccc; /* Medium gray on hover */
+    transition: 0.3s;
+}
+
+/* Custom Scrollbar */
+.table-wrapper::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888; /* Dark gray scrollbar */
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Light gray track */
+}

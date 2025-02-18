@@ -1,0 +1,67 @@
+<div class="container d-flex justify-content-center">
+  <div class="row w-100 d-flex align-items-start">
+    <!-- Form Column -->
+    <div class="col-md-4">
+      <h3>Add Products</h3>
+      <form [formGroup]='form' 
+            (ngSubmit)="editingProductIndex === null ? addProduct() : saveProduct()" 
+            class="p-3 border rounded bg-light">
+        
+        <div class="form-group mb-2">
+          <label>Product Name</label>
+          <textarea class="form-control" formControlName="name"></textarea>
+        </div>
+
+        <div class="form-group mb-2">
+          <label>Price</label>
+          <input class="form-control" type="number" formControlName="price">
+        </div>
+
+        <div class="form-group mb-2">
+          <label>Stock</label>
+          <input class="form-control" type="number" formControlName="stock">
+        </div>
+
+        <div class="form-group mb-3">
+          <label>Category</label>
+          <textarea class="form-control" formControlName="category"></textarea>
+        </div>
+
+        <button class="btn btn-success me-2 w-100" type="submit" [disabled]="form.invalid">
+          {{ editingProductIndex === null ? 'Add' : 'Save' }}
+        </button>
+        <button *ngIf="editingProductIndex !== null" class="btn btn-danger w-100 mt-2" type="button" (click)="cancelEdit()">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Table Column -->
+    <div class="col-md-8">
+      <h3>Product List</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered w-100 text-center align-middle">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products; let i = index">
+              <td>{{ product.name }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.stock }}</td>
+              <td>{{ product.category }}</td>
+              <td class="button-container">
+                <button class="btn btn-warning btn-sm edit-btn" (click)="editProduct(i)">Edit</button>
+                <button class="btn btn-danger btn-sm delete-btn" (click)="deleteProduct(i)">Delete</button>
+              </td>                   
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

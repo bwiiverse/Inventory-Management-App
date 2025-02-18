@@ -1,0 +1,28 @@
+<div class="container-fluid bg-2 text-center">
+  <br />
+  <div class="row">
+      <!-- Add Products Section -->
+      <div class="container d-flex justify-content-center">
+          <div class="table-wrapper"> <!-- Added this wrapper -->
+              <table class="table table-bordered text-center">
+                  <thead>
+                      <tr>
+                          <th style="text-align: center;">Product Name</th>
+                          <th style="text-align: center;">Price</th>
+                          <th style="text-align: center;">Stock</th>
+                          <th style="text-align: center;">Category</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let product of listofProducts">
+                          <td>{{ product.name }}</td>
+                          <td>{{ product.price }}</td>
+                          <td>{{ product.stock }}</td>
+                          <td>{{ product.category }}</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div> <!-- Closing table-wrapper div -->
+      </div>
+  </div>
+</div>

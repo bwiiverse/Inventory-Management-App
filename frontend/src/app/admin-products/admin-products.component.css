@@ -1,0 +1,121 @@
+/* General styling for the container */
+.container {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Styling for the form */
+  form {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000; /* Black border */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Form input fields */
+  .form-control {
+    border: 1px solid #000; /* Black border */
+    background-color: #f8f9fa; /* Light gray */
+    color: #000; /* Black text */
+  }
+  
+  /* Form labels */
+  label {
+    font-weight: bold;
+    color: #000; /* Black */
+  }
+  
+  /* Buttons styling */
+  button {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Styling for the product list table */
+  .table {
+    border: 2px solid #000; /* Black border */
+    background-color: #ffffff; /* White background */
+  }
+  
+  /* Table header */
+  .table thead {
+    background-color: #000; /* Black header */
+    color: #fff; /* White text */
+  }
+  
+  /* Table rows */
+  .table tbody tr {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #000; /* Black text */
+  }
+  
+  /* Table borders */
+  .table th,
+  .table td {
+    border: 1px solid #000; /* Black border */
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  /* Add hover effect for rows */
+  .table tbody tr:hover {
+    background-color: #ddd; /* Slightly darker gray on hover */
+  }
+  
+  /* Button spacing */
+  .button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center buttons in the cell */
+  }
+  
+  /* Edit and Delete buttons */
+  .edit-btn {
+    background-color: #ffc107 !important; /* Yellow */
+    color: #000;
+    border: 1px solid #000;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545 !important; /* Red */
+    color: #fff;
+    border: 1px solid #000;
+  }
+
+  /* Styling for h3 headers */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; /* Black text */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; /* Center-align the text */
+    padding: 10px 0;
+    border-bottom: 3px solid #000; /* Adds an underline effect */
+    margin-bottom: 20px;
+  }
+  /* Make the product list table scrollable */
+.table-responsive {
+    max-height: 400px; /* Set a fixed height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Optional: Adds a border around the table */
+  }
+  
+  /* Optional: Style scrollbar for better aesthetics */
+  .table-responsive::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+  }
+  
+  
+  

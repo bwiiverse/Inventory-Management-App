@@ -1,0 +1,84 @@
+/* Ensure full height and remove margin */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center the form properly */
+.main-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+}
+
+/* Remove unnecessary spacing from Bootstrap's container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Ensure row does not interfere */
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the form container */
+.col-md-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style the form */
+form {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Headings */
+h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border: 1px solid #000; /* Black border for input fields */
+    background-color: white;
+    color: black;
+}
+
+/* Button styling */
+.btn-success {
+    background-color: black;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-success:hover {
+    background-color: #333; /* Darker black on hover */
+}
