@@ -1,0 +1,40 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    restart: always
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - COUCHDB_URL=http://admin:admin@couchdb:5984
+    depends_on:
+      couchdb:
+        condition: service_healthy
+    networks:
+      - app-network
+    restart: always
+
+  couchdb:
+    image: couchdb:3.2
+    ports:
+      - "5984:5984"
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=admin
+    networks:
+      - app-network
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5984"]
+      interval: 5s
+      retries: 5
+
+networks:
+  app-network:
+    driver: bridge
